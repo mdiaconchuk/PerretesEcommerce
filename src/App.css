@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+font-family: 'Nunito', sans-serif}
+
+.darkBg {
+background-color: #302c2c
+}
