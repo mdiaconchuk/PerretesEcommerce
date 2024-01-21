@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        "darkBg": "#302c2c"
+        "darkBg": "#302c2c",
+        "transparentDark": "rgba(0, 0, 0, 0.75)",
+        "transparentLight": "rgba(220,215,204,0.75)"
       },
     },
   },
