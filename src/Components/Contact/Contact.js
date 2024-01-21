@@ -3,42 +3,45 @@ import Form from './Form'
 import { useEffect } from 'react'
 import { ContactContext } from './ContactContext'
 import { useContext } from 'react'
+import BackgroundParticles from '../BackgroundParticles'
+import BackgroundParticlesLight from '../BackgroundParticlesLight'
 
 function Contact() {
 
   let bgVar;
   let { contactDark } = useContext(ContactContext)
 
-  if (contactDark === true) { bgVar = "url(../images/bg.png)" }
-  else { bgVar = "url(../images/bglight.png" }
+  // if (contactDark === true) { bgVar = "url(../images/bg.png)" }
+  // else { bgVar = "url(../images/bglight.png" }
 
   return (
     <div>
+      { (contactDark === false ? <BackgroundParticles/> : <BackgroundParticlesLight/>)}
       {/* FORMULARIO / CONTACTO */}
-      <div class="block lg:flex justify-center text-lg bg-no-repeat text-slate-200 dark:text-gray-900 align-middle bg-cover" id="bgContact" style={{ backgroundImage: bgVar }}>
-        <p class="w-10/12 lg:w-4/12 py-8 mx-auto lg:mx-0"><Form /></p> {/* FORMULARIO */}
+      <div class="block lg:flex justify-center text-lg bg-no-repeat text-slate-200 dark:text-gray-900 align-middle bg-cover" id="bgContact">
+        <p class="w-11/12 lg:w-4/12 py-8 mx-auto lg:mx-0"><Form /></p> {/* FORMULARIO */}
 
         <div>
-          <div class="block grid-cols-2 gap-2 text-gray-900 dark:*:text-slate-200 *:bg-transparentLight dark:*:bg-transparentDark *:rounded-md *:text-center lg:grid w-full *:p-9 *:m-3 py-8">
+          <div class="block grid-cols-2 gap-2 text-gray-900 *:text-slate-200 *:bg-transparentLight dark:*:bg-transparentDark *:rounded-md *:text-center lg:grid w-full *:p-9 *:m-3 py-8">
             <div>
-              <p><i class="fa-solid fa-location-dot"></i></p>
+              <p><i class="fa-solid fa-location-dot text-3xl pb-2 dark:text-orange-300 text-indigo-400"></i></p>
               <p class="font-semibold">Nuestra oficina</p>
               <p>744 Av. Perrongo</p>
             </div>
 
             <div>
-              <p><i class="fa-solid fa-phone"></i></p>
+              <p><i class="fa-solid fa-phone text-3xl pb-2 dark:text-orange-300 text-indigo-400"></i></p>
               <p class="font-semibold">Teléfono</p>
               <p>744 Av. Perrongo</p>
             </div>
 
             <div>
-              <p><i class="fa-solid fa-envelope"></i></p>
+              <p><i class="fa-solid fa-envelope text-3xl pb-2 dark:text-orange-300 text-indigo-400"></i></p>
               <p class="font-semibold">Email</p>
               <p>contacto@perretes.com</p>
             </div>
             <div>
-              <p><i class="fa-brands fa-instagram"></i></p>
+              <p><i class="fa-brands fa-instagram text-3xl pb-2 dark:text-orange-300 text-indigo-400"></i></p>
               <p class="font-semibold">Instagram</p>
               <p>@perretes_ecommerce</p>
             </div>

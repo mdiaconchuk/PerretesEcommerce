@@ -8,8 +8,10 @@ module.exports = {
     extend: {
       backgroundColor: {
         "darkBg": "#302c2c",
-        "transparentDark": "rgba(0, 0, 0, 0.75)",
-        "transparentLight": "rgba(220,215,204,0.75)"
+        "transparentDark": "rgba(0, 0, 0, 0.50)",
+        "transparentLight": "rgba(37, 49, 61, 0.8)",
+        "hoverTransparentLight": "#86817a",
+        "hoverTransparentDark": "#dbd3c8",
       },
     },
   },
